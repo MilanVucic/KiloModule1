@@ -16,6 +16,6 @@ public class Part6 {
         System.out.println("_____________________");
         System.out.println(c.equals(d));
         System.out.println(c.equals(e));
-        System.out.println((a+b).equals(c));
+        System.out.println((a+b).equalsIgnoreCase(c));
     }
 }
