@@ -4,6 +4,16 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+        MyLinkedList<Integer> myLinkedList = new MyLinkedList<>();
+        myLinkedList.addEnd(15);
+        myLinkedList.addFront(5);
+        myLinkedList.addFront(10);
+        myLinkedList.addFront(13);
+        myLinkedList.addEnd(25);
+        System.out.println(myLinkedList);
+    }
+
+    private static void arrayListPractice() {
         ArrayList<Integer> arrayList = new ArrayList<>();
         arrayList.add(5);
         arrayList.add(5);
