@@ -3,6 +3,8 @@ package lesson_17;
 import java.util.*;
 
 public class Main {
+    // Additional HW: Create a word counter that's given a String
+    // and it displays the top words sorted by the number of occurrences
     public static void main(String[] args) {
         String sentence = "hello !@#$%$%^&*^^#$%@#$!#@" +
                 "ššššćććčččšđđ this is a sentence where we would like to count letter occurrences.";
