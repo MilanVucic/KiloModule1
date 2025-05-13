@@ -12,6 +12,24 @@ public class Main {
     // [()] - True
     // []((){}) -> True
     // ]([) -> False
+    // [(])
+    // [([)]]
+    //
+
+    // [](([]){})
+    // (())]
+    // {{{{{{{{
+    // ((
+    // Stack: ))
+
+    // Move thru the input
+    // If it's a left bracket, put on stack
+    // If it's a right, see the top of the stack ->
+    // if there's nothing, RETURN false
+    // if there is, see if it's the proper opener for this closer
+    // if not, RETURN false
+    // if yes, remove 1 char from the stack, move on
+    // At the end, return true if stack is empty, false otherwise
     public static void main(String[] args) {
         Stack<String> names = new Stack<>();
         // LIFO
