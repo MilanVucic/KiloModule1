@@ -27,12 +27,14 @@ public class Main {
         3. List free cars
         4. Pick a car to rent
         5. Return a car from renting
+        6. ... Keep track of all "rents", car, start/end date, total cost, etc.
      */
     public static void main(String[] args) throws IOException {
         example("milan");
         example("asd");
         example("asd", "asdjajsd");
         example("asd", "asdjajsd", "anjsdjdj");
+        String.format("Hello %s, %d", "Milan", 23);
     }
 
     private static void example(String name, String... data) {
