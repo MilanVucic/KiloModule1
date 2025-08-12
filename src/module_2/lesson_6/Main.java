@@ -24,7 +24,6 @@ public class Main {
         List<String> filtered = names.stream()
                 .filter(a -> a.length() > 3)
                 .sorted((a, b) -> b.length() - a.length())
-
                 .toList();
         boolean anyNamesLongerThan10 = names.stream().allMatch(s -> s.length() < 10);
         Optional<String> nameOnL = names.stream()
@@ -36,6 +35,11 @@ public class Main {
 
         NamePrinter namePrinter = new NamePrinter("____", "*****");
         names.forEach(namePrinter::printName);
+
+        BuilderPattern builderPattern = new BuilderPattern();
+        builderPattern.setC(5.4)
+                .setB("asd")
+                .setA(1);
     }
 
     private static int myCustomCompare(Integer a, Integer b) {
