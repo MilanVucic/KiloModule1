@@ -3,6 +3,8 @@ package module_2.lesson_10;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,6 +18,37 @@ public class Main {
 
         // is a == a? if so, move on to palindrome(bb)
         // if not, return false
+        System.out.println("-------------");
+        System.out.println(isInArray(5, new int[]{1, 2, 3, 4, 5, 6}));
+        List<Integer> list = new ArrayList<>();
+        list.add(5);
+        list.add(3);
+        System.out.println(isInList(5, list));
+    }
+
+    private static boolean isInList(int number, List<Integer> elements) {
+        Integer first = elements.remove(0);
+        if (first == null) {
+            return false;
+        }
+        if (first == number) {
+            return true;
+        }
+        return isInList(number, elements);
+    }
+
+    private static boolean isInArray(int number, int[] array) {
+        return isInArrayHelper(number, array, 0);
+    }
+
+    private static boolean isInArrayHelper(int number, int[] array, int index) {
+        if (index >= array.length) {
+            return false;
+        }
+        if (number == array[index]) {
+            return true;
+        }
+        return isInArrayHelper(number, array, index + 1);
     }
 
     // returns true if string is read the same from back
@@ -70,7 +103,7 @@ public class Main {
 
     private static void printAllPaths(Path root) {
         try {
-            for (Path subpath: Files.newDirectoryStream(root)) {
+            for (Path subpath : Files.newDirectoryStream(root)) {
                 if (Files.isDirectory(subpath)) {
                     printAllPaths(subpath);
                 }
