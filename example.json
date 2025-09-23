@@ -1,0 +1,24 @@
+{
+  "name": "Milan",
+  "age": 31,
+  "isUnderage": false,
+  "height": 188.5123,
+  "address": {
+    "city": "Belgrade",
+    "country": "Serbia",
+    "zip": 111000,
+    "something": {
+      "...": 123
+    }
+  },
+  "phones": [
+    "+12391239",
+    "+123812388",
+    "+1231231234"
+  ],
+  "array": [
+    1,
+    "asd",
+    {"as": "asdgf"}
+  ]
+}
