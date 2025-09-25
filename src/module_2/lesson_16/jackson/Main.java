@@ -16,7 +16,8 @@ public class Main {
         objectMapper.setVisibility(VisibilityChecker.Std.defaultInstance().withFieldVisibility(JsonAutoDetect.Visibility.ANY));
 
         try {
-            RedditResponse redditResponse = objectMapper.readValue(new URL("https://www.reddit.com/.json"), RedditResponse.class);
+            RedditResponse redditResponse = objectMapper.readValue(
+                    new URL("https://www.reddit.com/.json"), RedditResponse.class);
 
             for (RedditPostWrapper wrapper : redditResponse.getData().getPostWrappers()) {
                 System.out.println(wrapper.getPost());
